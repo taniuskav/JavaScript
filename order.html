@@ -1,17 +1,93 @@
 <script>
+  const MENU = "     ***MENU:***      \n"
+               + " 1. Pizza - 65 lei  \n"
+               + " 2. Salad - 5 lei   \n"
+               + " 3. Zeama - 25 lei  \n"
+               + "  ***************   \n";
+  var price_pizza = 65;
+  const qty_pizza = 10;
+  var price_salad = 5;
+  const qty_salad = 0;
+  var price_zeama = 25;
+  const qty_zeama = 5;
 
-  const MENU = " ***MENU:*** \n"
-               + "1. Pizza - 65 lei \n"
-               + "2. Salad - 5 lei \n"
-               + "3. Zeama - 25 lei \n"
-               + "***************";
-  var option =  prompt(MENU);
+  var option =  prompt(MENU + " Care e alegerea dvs?");
 
-     if (option == null) {
-       alert("Nu ai ales nimic?");
+  if (option == null) {
+    alert("Pacat ca nu ti-a placut nimic din meniu.");
      }
-      else {
-          alert ("Tu ai ales " + option);
-      }
+  if (option == "1") {
+     alert ("Tu ai ales " + '"' + option + '"' + " pretul = " + price_pizza + "(lei)");
+      var qty = prompt("Ce cantitate doriti?");
 
+      if (qty_pizza == 0) {
+        alert("Din pacate nu mai avem in meniu " + option + ". Ne pare rau!"); };
+
+      if (qty_pizza != 0 && qty <= qty_pizza) {
+          var total = qty * price_pizza;
+          alert ("OK! Costul va fi = " + total + " (lei)"); };
+            if (total >=500) {alert("Bonus din partea restaurantului: Livrarea va fi gratuita!"); };
+            if (total < 500) {alert("Costul total al comenzii cu livrarea inclusa 25 lei va fi = " + (total + 25) + "(lei)"); };
+
+      if (qty_pizza != 0 && qty > qty_pizza) {
+       var choice = prompt ("Din pacate la moment avem doar " + qty_pizza + " portii de " + option + ".\n Comandatati " + qty_pizza + " portii? \n Introduceti Da sau Nu ");
+          if (choice == "Da") {
+            var total = qty_pizza * price_pizza;
+            alert ("OK! Costul va fi = " + total + " (lei)")
+              if (total >=500) {alert("Bonus din partea restaurantului: Livrarea va fi gratuita!") };
+              if (total < 500) {alert("Costul total al comenzii cu livrarea inclusa 25 lei va fi = " + (total + 25) + "(lei)") };
+             };
+          if (choice == "Nu") { alert("Ne pare rau.") };
+          };
+     };
+
+  if (option == "2") {
+       alert ("Tu ai ales " + '"' + option + '"' + " pretul = " + price_salad + "(lei)");
+        var qty = prompt("Ce cantitate doriti?");
+
+        if (qty_salad == 0) {
+          alert("Din pacate nu mai in meniu " + option + ". Ne pare rau!") };
+
+        if (qty_salad != 0 && qty <= qty_salad) {
+            var total = qty * price_salad;
+            alert ("OK! Costul va fi = " + total + " (lei)") };
+              if (total >=500) {alert("Bonus din partea restaurantului: Livrarea va fi gratuita!") };
+              if (total < 500) {alert("Costul total al comenzii cu livrarea inclusa 25 lei va fi = " + (total + 25) + "(lei)") };
+
+        if (qty_salad != 0 && qty > qty_salad) {
+         var choice = prompt ("Din pacate la moment avem doar " + qty_salad + " portii de " + option + ".\n Comandatati " + qty_salad + " portii? \n Introduceti Da sau Nu ");
+            if (choice == "Da") {
+              var total = qty_salad * price_salad;
+              alert ("OK! Costul va fi = " + total + " (lei)")
+                if (total >=500) {alert("Bonus din partea restaurantului: Livrarea va fi gratuita!") };
+                if (total < 500) {alert("Costul total al comenzii cu livrarea inclusa 25 lei va fi = " + (total + 25) + "(lei)") };
+               };
+            if (choice == "Nu") { alert("Ne pare rau.") };
+            };
+       };
+
+  if (option == "3") {
+            alert ("Tu ai ales " + '"' + option + '"' + " pretul = " + price_zeama + "(lei)");
+             var qty = prompt("Ce cantitate doriti?");
+
+             if (qty_zeama == 0) {
+               alert("Din pacate nu mai in meniu " + option + ". Ne pare rau!") };
+
+             if (qty_zeama != 0 && qty <= qty_zeama) {
+                 var total = qty * price_zeama;
+                 alert ("OK! Costul va fi = " + total + " (lei)") };
+                   if (total >=500) {alert("Bonus din partea restaurantului: Livrarea va fi gratuita!") };
+                   if (total < 500) {alert("Costul total al comenzii cu livrarea inclusa 25 lei va fi = " + (total + 25) + "(lei)") };
+
+             if (qty_zeama != 0 && qty > qty_zeama) {
+              var choice = prompt ("Din pacate la moment avem doar " + qty_zeama + " portii de " + option + ".\n Comandatati " + qty_zeama + " portii? \n Introduceti Da sau Nu ");
+                 if (choice == "Da") {
+                   var total = qty_zeama * price_zeama;
+                   alert ("OK! Costul va fi = " + total + " (lei)")
+                     if (total >=500) {alert("Bonus din partea restaurantului: Livrarea va fi gratuita!") };
+                     if (total < 500) {alert("Costul total al comenzii cu livrarea inclusa 25 lei va fi = " + (total + 25) + "(lei)") };
+                    };
+                 if (choice == "Nu") { alert("Ne pare rau.") };
+                 };
+            };
 </script>
