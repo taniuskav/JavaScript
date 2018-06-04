@@ -1,19 +1,22 @@
-
 <body style ="text-align: center">
 
 <script>
  var n=1;
  var w = 200;
  var h = 150;
- while (n<=8) {
+ var nr = prompt ("Introduceti nr de imagini");
+ var row = prompt ("Introduceti nr de imagini intr-un rind");
+ var last_img =  nr*1+1;
+ while (n<=nr) {
     document.write ('<img src="https://picsum.photos/'+w+'/'+h+'/?id='+n+'" alt=""/>' )
-     if (n%4 == 0) {
+     if (n%row == 0) {
          document.write('<br/>')
      }
         n++;
-     if (n == 9){
-         document.write ('<img src="https://picsum.photos/'+(w*4)+'/'+(0.75*w*4)+'/?id='+n+'" alt=""/>' )
-     }
+
+    if (n == last_img){
+        document.write ('<img src="https://picsum.photos/'+(w*row)+'/'+(0.75*w*row)+'/?id='+n+'" alt=""/>' )
+    }
     }
 </script>
 
