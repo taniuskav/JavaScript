@@ -1,0 +1,23 @@
+<style >
+    body {font-family: monospace;}
+</style>
+
+<script>
+   var row=1;
+   while(row<=10) {
+
+ /////////////////////////////
+    var col=1;
+    while (col<=10) {
+   if ((col>1 && col<10) && (row>1 && row<10))
+   {
+      document.write(". ");
+   }
+      else{  document.write("# ");}
+        col++;
+    }
+ /////////////////////////////
+ document.write("<br>")
+ row++;
+   }
+</script>

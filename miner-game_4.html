@@ -1,0 +1,36 @@
+<style >
+    body {font-family: monospace;}
+</style>
+
+<script>
+   var r= prompt("row?");
+   var c= prompt("col?");
+
+   var row=1;
+   while(row<=10) {
+ /////////////////////////////
+    var col=1;
+    while (col<=10) {
+
+   if(row==r && col==c) {
+      document.write("X ");
+   }
+
+   else{
+   if ((col>1 && col<10) && (row>1 && row<10))
+   {
+      document.write(". ");
+    }
+      else{  document.write("# ");}
+
+    }
+     col++;
+  }
+   if (col==10) {
+     document.write(col*1+1)
+   }
+ /////////////////////////////
+ document.write(row+"<br>");
+ row++;
+   }
+</script>
