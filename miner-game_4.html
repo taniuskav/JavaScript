@@ -5,24 +5,28 @@
 <script>
    var r= prompt("row?");
    var c= prompt("col?");
-
    var row=1;
-   while(row<=10) {
+   while(row<=11) {
  /////////////////////////////
     var col=1;
     while (col<=10) {
-
-   if(row==r && col==c) {
-      document.write("X ");
+      if (row==11) {
+        document.write(col+" ");}
+    else{
+   if (row==r && col==c) {
+     if (r==1 || r==10 || c==1 || c==10 )
+     {
+     alert("Nu puteti atinge marginile, alegeti alte coordonate");
+     document.write("# ");
+     var r= prompt("row?");
+     var c= prompt("col?");}
+     else{document.write("X ");}
    }
-
-   else{
-   if ((col>1 && col<10) && (row>1 && row<10))
+    else if ((col>1 && col<10) && (row>1 && row<10))
    {
       document.write(". ");
     }
       else{  document.write("# ");}
-
     }
      col++;
   }
@@ -30,7 +34,8 @@
      document.write(col*1+1)
    }
  /////////////////////////////
- document.write(row+"<br>");
+  if(row==11) {document.write(" ");}
+  else {document.write(row+"<br>");}
  row++;
    }
 </script>
