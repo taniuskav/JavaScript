@@ -1,0 +1,13 @@
+<button onclick="img();"> + ADD </button>
+<hr/>
+<script>
+
+    function img() {
+        var url = prompt("Insert url");
+        // document.write('<img src="'+url+'"/>');
+        document.write(`<img src="${url}">`);
+        document.write(`<hr>`)
+        document.write(`<button onclick="img();"> + ADD </button>`);
+    }
+
+</script>
