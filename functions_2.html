@@ -1,15 +1,24 @@
 <script>
-
-  function hi( lang ) {
-    var lang=prompt("Insert lang!")
+  function hi( lang, name1, name2 ) {
     switch (lang) {
-      case "en": alert("Hello :)");break;
-      case "ro" :alert("Buna! :)");break;
-      case "ru" : alert("Привет!");break;
-
-      default: alert("Buna! Hello! Привет!");
+      case "en":
+          if(name1!=null && name2==null) {alert("Hello "+name1 + "!");}
+          else if (name1!=null && name2!=null) {alert("Hello " + name1 + " and " + name2 + "!");}
+          else {alert("Hello People :)");}
+          break;
+      case "ro" :
+          if(name1!=null && name2==null) {alert("Salut "+name1 + "!");}
+          else if (name1!=null && name2!=null) {alert("Salut " + name1 + " si " + name2 + "!");}
+          else {alert("Salut lume! :)");}
+          break;
+      case "ru" :
+          if(name1!=null && name2==null) {alert("Привет "+name1 + "!");}
+          else if (name1!=null && name2!=null) {alert("Привет " + name1 + " и " + name2 + "!");}
+          else {alert("Привет мир! :)");}
+          break;
+      default:
+          alert("Buna! Hello! Привет!");
     }
   }
-  hi();
-
+  hi("ro","Yan","Yini");
 </script>
