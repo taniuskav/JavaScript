@@ -1,0 +1,28 @@
+<script>
+    // nav -> object ... <nav> menu ... </nav>
+    var nav = {
+        //proprieties
+      id: "main-navigation" ,
+      style : {
+              color: "red",
+              border: "1px solid black",
+              margin: "20px"
+              },
+      content: {
+              href: "/about.html",
+              text: "About Us"
+              },
+
+        //methods()
+       render: function() {
+           document.write(`<nav id="${nav.id}">
+               <a href="${nav.content.href}" style="color: ${nav.style.color}; border: ${nav.style.border}; margin: ${nav.style.margin}">${nav.content.text}</a>
+                           </nav>`);
+                           }
+
+    };
+
+nav.render();
+//alert(nav.style.margin);
+
+</script>
