@@ -1,0 +1,28 @@
+<script>
+
+//Declare a CLASS
+  class User {
+     //structure
+     constructor( login , email, avatar, password =  '123456') {
+        this.login = login;
+        this.email = email;
+        this.avatar = avatar;
+        this.password = password;
+     }
+     render () {
+         document.write(`<h2>${this.login}</h2>`);
+         document.write(`<h3>${this.email}</h3>`);
+         document.write(`<img src ="${this.avatar}">`);
+     }
+  }
+
+
+//using the CLASS
+var user1 = new User("vtv07", "vtv77@gmail.com" , "http://www.personalbrandingblog.com/wp-content/uploads/2017/08/blank-profile-picture-973460_640-300x300.png","111");
+var user2 = new User("vvv96" , "vvv96@gmail.com" ,"http://spi.uz/wp-content/uploads/2018/03/no-photo.jpg");
+user1.render();
+user2.render();
+//console.log(user1);
+//console.log(user2);
+
+</script>
